@@ -1,3 +1,8 @@
+# Author: Nadika Prabhath
+# GitHub Username: nadikaprabhath
+# GitHub URL: https://github.com/nadikaprabhath
+# Copyright (c) 2025 Nadika Prabhath. All rights reserved.
+
 import os
 from flask import Flask, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
@@ -14,6 +19,9 @@ def allowed_file(filename):
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
+        print(f"Request Content-Type: {request.content_type}")  # Debug: Shows if multipart
+        print(f"Request Files: {request.files.keys()}")  # Debug: Should show 'file' if correct
+        
         # Handle file/photo upload
         if 'file' in request.files:
             file = request.files['file']
@@ -23,19 +31,27 @@ def upload():
             if file and allowed_file(file.filename):
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                print(f'File saved: {filename}')  # Logs to console
+                print(f'File saved: {filename}')
                 return 'File uploaded successfully!'
             else:
                 return 'Invalid file type'
         
         # Handle text share (if no file, assume text in body)
         elif request.data:
-            text = request.data.decode('utf-8')
-            filename = 'shared_text.txt'
-            with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'w') as f:
-                f.write(text)
-            print(f'Text saved: {filename}')  # Logs to console
-            return 'Text shared successfully!'
+            try:
+                text = request.data.decode('utf-8')
+                filename = 'shared_text.txt'
+                with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'w') as f:
+                    f.write(text)
+                print(f'Text saved: {filename}')
+                return 'Text shared successfully!'
+            except UnicodeDecodeError:
+                # Fallback for binary data mistakenly sent as text
+                filename = 'shared_binary.dat'
+                with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'wb') as f:
+                    f.write(request.data)
+                print(f'Binary data saved as: {filename} (likely a misconfigured file upload)')
+                return 'Binary data received (check Shortcut setup for files)'
         
         else:
             return 'No data received'
@@ -43,4 +59,13 @@ def upload():
     return 'Server is running'
 
 if __name__ == '__main__':
+    print("")
+    print("-------------------------------------------------------")
+    print("Author: Nadika Prabhath")
+    print("GitHub Username: nadikaprabhath")
+    print("GitHub URL: https://github.com/nadikaprabhath")
+    print("Copyright (c) 2025 Nadika Prabhath. All rights reserved.")
+    print("-------------------------------------------------------")
+    print("")
+    
     app.run(host='0.0.0.0', port=5000, debug=True)
