@@ -35,7 +35,7 @@ pip install flask
 Run the server from your terminal:
 
 ```bash
-python app.py
+python server.py
 ```
 
 The server will start on `http://0.0.0.0:5000` and be accessible from any device on your network.
