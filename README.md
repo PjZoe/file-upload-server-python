@@ -1,6 +1,30 @@
-# File Upload Server
+<p align="center">
+  <b>File Upload Server</b>
+</p>
 
-A simple Flask-based file upload server that accepts files and text shares from any device on your local network.
+<p align="center">
+  <a href="https://github.com/nadikaprabhath" target="_blank">
+    <img src="https://img.shields.io/badge/Follow-Nadika Prabhath-000000?style=for-the-badge&logo=github&logoColor=white" height="30">
+  </a>
+  <a href="https://t.me/your_telegram_link" target="_blank">
+    <img src="https://img.shields.io/badge/Chat-Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white" height="30">
+  </a>
+   <a href="https://www.linkedin.com/in/nadikaprabhath" target="_blank">
+    <img src="https://img.shields.io/badge/Chat-linkendin-26A5E4?style=for-the-badge&logo=linkendin&logoColor=white" height="30">
+  </a>
+  <a href="https://github.com/nadikaprabhath/magnet-torrent-downloader/releases/tag/v1.0.0" target="_blank">
+    <img src="https://img.shields.io/badge/Downloads-10-00C853?style=for-the-badge&logo=icloud&logoColor=white" height="30">
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://img.shields.io/badge/Commit_Activity-30/month-2962FF?style=for-the-badge&logo=git&logoColor=white" height="30">
+  </a>
+  <a href="#" target="_blank">
+    <img src="https://img.shields.io/badge/Issues-1_closed-FFD54F?style=for-the-badge&logo=github&logoColor=black" height="30">
+  </a>
+</p>
+
+
+A simple file upload server that accepts files and text shares from any device on your local network.
 
 ## Features
 
@@ -19,14 +43,14 @@ A simple Flask-based file upload server that accepts files and text shares from 
 
 ## Installation
 
-1. **Install Python 3.x** (if not already installed)
+1. **Install Python 3.x** Download from [python.org](https://www.python.org/downloads/) if not already installed.
 
 2. **Install Flask**:
 ```bash
 pip install flask
 ```
 
-3. **Download the script** and save it as `app.py`
+3. **Download the script** and save it as `server.py`
 
 ## Usage
 
@@ -123,6 +147,14 @@ Text will be saved as `shared_text.txt` in the server directory.
 
 **To use**: Copy text → Open Shortcuts → Run it. Or add to share sheet for notes/apps.
 
+## Images
+
+<p align="center">
+  <img src="assets/IMG_3392.PNG" width="250" alt="Screenshot">
+  <img src="assets/IMG_3390.PNG" width="250" alt="Screenshot">
+  <img src="assets/IMG_3391.PNG" width="250" alt="Screenshot">
+</p>
+
 ## Configuration
 
 ### Change Upload Directory
@@ -187,30 +219,11 @@ python app.py --port 5001
 - Text snippet sharing between devices
 - One-tap photo backup from iPhone to laptop
 
-## License
-
-MIT License
-
-Copyright (c) 2025 Nadika Prabhath
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
 ---
 
-**Created by Nadika Prabhath**
+## Contributing
+Fork the repo, make changes, and submit a pull request. Issues welcome at [github.com/nadikaprabhath/file-sharing-server-python](https://github.com/nadikaprabhath/file-sharing-server-python).
+
+## License
+MIT License. Copyright (c) 2025 Nadika Prabhath. See script header for details. 
+

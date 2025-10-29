@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = os.getcwd()  # Saves to the current directory
-app.secret_key = 'super_secret_key'  # For flash messages, change this in production
+app.secret_key = 'super_secret_key' # change this in production
 
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'mp4', 'mov', 'doc', 'docx'}  # Add more as needed
 
@@ -19,8 +19,8 @@ def allowed_file(filename):
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
-        print(f"Request Content-Type: {request.content_type}")  # Debug: Shows if multipart
-        print(f"Request Files: {request.files.keys()}")  # Debug: Should show 'file' if correct
+        print(f"Request Content-Type: {request.content_type}")  # Shows if multipart
+        print(f"Request Files: {request.files.keys()}")  # Should show 'file' if correct
         
         # Handle file/photo upload
         if 'file' in request.files:
