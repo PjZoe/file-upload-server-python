@@ -8,10 +8,10 @@ from flask import Flask, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = os.getcwd()  # Saves to the current directory
-app.secret_key = 'super_secret_key' # change this in production
+app.config['UPLOAD_FOLDER'] = os.getcwd()
+app.secret_key = 'super_secret_key'
 
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'mp4', 'mov', 'doc', 'docx'}  # Add more as needed
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'mp4', 'mov', 'doc', 'docx'}
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -19,10 +19,9 @@ def allowed_file(filename):
 @app.route('/upload', methods=['GET', 'POST'])
 def upload():
     if request.method == 'POST':
-        print(f"Request Content-Type: {request.content_type}")  # Shows if multipart
-        print(f"Request Files: {request.files.keys()}")  # Should show 'file' if correct
+        print(f"Request Content-Type: {request.content_type}")
+        print(f"Request Files: {request.files.keys()}")
         
-        # Handle file/photo upload
         if 'file' in request.files:
             file = request.files['file']
             if file.filename == '':
@@ -36,7 +35,6 @@ def upload():
             else:
                 return 'Invalid file type'
         
-        # Handle text share (if no file, assume text in body)
         elif request.data:
             try:
                 text = request.data.decode('utf-8')
@@ -45,8 +43,7 @@ def upload():
                     f.write(text)
                 print(f'Text saved: {filename}')
                 return 'Text shared successfully!'
-            except UnicodeDecodeError:
-                # Fallback for binary data mistakenly sent as text
+            except UnicodeDecodeError:                
                 filename = 'shared_binary.dat'
                 with open(os.path.join(app.config['UPLOAD_FOLDER'], filename), 'wb') as f:
                     f.write(request.data)
